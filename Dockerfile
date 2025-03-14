@@ -1,4 +1,4 @@
-FROM rust:1.74
+FROM rust:1.81
 
 ENV HOME="/home/user"
 ENV PATH="$HOME/.rye/shims:$PATH"
