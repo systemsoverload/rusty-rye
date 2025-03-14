@@ -1,4 +1,4 @@
-FROM rust:1.81
+FROM rust:1.85
 
 ENV HOME="/home/user"
 ENV PATH="$HOME/.rye/shims:$PATH"
@@ -12,7 +12,7 @@ RUN apt-get update \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& mkdir -p $HOME
 
-RUN curl -sSf https://rye-up.com/get | RYE_INSTALL_OPTION="--yes" bash
+RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash
 
 CMD ["rye", "--version"]
 
